@@ -84,25 +84,41 @@ h6 {
   margin: 0;
   position: fixed;
   top: calc(50% - 0px);
-  left: calc(50% - 97px);
+  left: calc(50% - 105px);
   font-size: 35px;
   font-weight: 700;
+  letter-spacing: 3px;
   line-height: 56px;
   color: #0563bb;
+  animation: animate-text 400ms linear infinite;
+}
+
+#preloader h8 {
+  margin: 0;
+  position: fixed;
+  top: calc(45% - 2px);
+  left: calc(51% - 6px);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 56px;
+  color: #0563bb;
+  animation: animate-texts 100ms linear infinite;
 }
 
 #preloader:before {
   content: "";
   position: fixed;
   top: calc(50% - 50px);
-  left: calc(50% - 20px);
+  left: calc(50% - 30px);
   border: 6px solid #0563bb;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: #b700ff;
+  border-bottom-color: #00ffd5;
+  border-right-color: #3cff00;
   border-radius: 50%;
-  width: 40px;
+  width: 60px;
   height: 60px;
-  animation: animate-preloader 400ms linear infinite;
+  animation: animate-preloader 100ms linear infinite;
 }
 
 @keyframes animate-preloader {
@@ -115,6 +131,42 @@ h6 {
   }
 }
 
+@keyframes animate-text {
+  0% {
+    color: #0563bb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic;
+  }
+  25% {
+    color: #00ffd5; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic;
+  }
+  50% { 
+    color: #ff7300;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic;
+  }
+  75% {
+    color: #00ffd5; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic;
+  }
+  100% {
+    color: #0563bb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic;
+  }
+}
+
+
+@keyframes animate-texts {
+  0% {
+    color: #0563bb; transform: rotate(0deg);
+  }
+  25% {
+    color: #00ffd5; transform: rotate(72deg);
+  }
+  50% { 
+    color: #ff7300; transform: rotate(144deg);
+  }
+  75% {
+    color: #00ffd5; transform: rotate(216deg);
+  }
+  100% {
+    color: #0563bb; transform: rotate(288deg);
+  }
+}
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
